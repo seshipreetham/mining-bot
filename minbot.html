@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINBOT</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+            align-items :first baseline
+            
+        }
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+
+        main {
+            text-align: center;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            max-width: 800px; /* Increased max-width */
+            width: 100%;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+        }
+
+        .buttons-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px; /* Added margin-bottom for spacing between button groups */
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+
+        .button, .button-secondary {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            position: relative;
+        }
+
+        .button {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .button-secondary {
+            background-color: #ecf0f1;
+            color: #333;
+        }
+
+        .button:hover, .button-secondary:hover {
+            background-color: #2980b9;
+        }
+
+        .info-container {
+            margin-top: 50px;
+            max-width: 600px;
+        }
+
+        .floating-window {
+            position: absolute;
+            background-color: #fff;
+            box-shadow: 3px 2px 5px rgba(29, 25, 25, 0.1);
+            padding: 90px;
+            border-radius: 10px;
+            display: none;
+            z-index: 500;
+        }
+
+        .button:hover .floating-window {
+            display: block;
+        }
+
+        .mining-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .mining-image {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .mining-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+<img id="logo" src="images/minbot.jpeg" width = 400 alt="MINBOT Logo">
+        <h1>MINBOT</h1>
+        <h2>Bridging the gap using a multilingual bot powered by AI</h2>
+    </header>
+    <main>
+        <button class="button" onclick="showInfo('getStarted')" onclick="window.location.href='file:///D:/web%20development/mining/minbot23.html'">Get Started</button>
+        <div class="buttons-container">
+            <div class="buttons-group">
+                <img src="images/mining.jpeg" alt="Coal Mining" class="mining-image">
+                <button class="button-secondary" onmouseover="showFloatingWindow('coal')" onmouseout="hideFloatingWindow('coal')">COAL
+                    <div class="floating-window" id="coalWindow"><b>Coal is a combustible black or brownish-black sedimentary rock. It is primarily composed of carbon.</b></div>
+                </button>
+            </div>
+            <div class="buttons-group">
+                <img src="images/zinc.jpeg" alt="Zinc Mining" class="mining-image">
+                <button class="button-secondary" onmouseover="showFloatingWindow('zinc')" onmouseout="hideFloatingWindow('zinc')">ZINC
+                    <div class="floating-window" id="zincWindow">Zinc is a chemical element with the symbol Zn (from Latin: zincum) and atomic number 30.</div>
+                </button>
+            </div>
+           
+            <div class="buttons-group">
+                <img src="images/copper.jpeg" alt="Copper Mining" class="mining-image">
+                <button class="button-secondary" onmouseover="showFloatingWindow('copper')" onmouseout="hideFloatingWindow('copper')">COPPER
+                    <div class="floating-window" id="copperWindow">Copper is a chemical element with the symbol Cu (from Latin: cuprum) and atomic number 29.</div>
+                </button>
+            </div>
+            <div class="buttons-group">
+                <img src="images/iron.jpeg" alt="Iron Mining" class="mining-image">
+                <button class="button-secondary" onmouseover="showFloatingWindow('iron')" onmouseout="hideFloatingWindow('iron')">IRON
+                    <div class="floating-window" id="ironWindow">Iron is a chemical element with the symbol Fe (from Latin: ferrum) and atomic number 26.</div>
+                </button>
+            </div>
+        </div>
+        <div id="infoContainer" class="info-container">
+            <!-- Information about each resource will be displayed here -->
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        function showFloatingWindow(resource) {
+            var window = document.getElementById(resource + 'Window');
+            window.style.display = 'block';
+        }
+
+        function hideFloatingWindow(resource) {
+            var window = document.getElementById(resource + 'Window');
+            window.style.display = 'none';
+        }
+
+        function showInfo(resource) {
+            var infoContainer = document.getElementById('infoContainer');
+            var infoText = '';
+            var imagePath = '';
+
+            switch (resource) {
+                case 'getStarted':
+                    infoText = 'Start your mining journey with MINBOT. Get started now!';
+                    break;
+                case 'coal':
+                    infoText = 'Coal is a combustible black or brownish-black sedimentary rock. It is primarily composed of carbon.';
+                    imagePath = 'https://tse3.mm.bing.net/th?id=OIP.sOYe_BOKygKJk-WZ8ka2lgHaE8&pid=Api&P=0&h=180';
+                    break;
+                case 'copper':
+                    infoText = 'Copper is a chemical element with the symbol Cu (from Latin: cuprum) and atomic number 29.';
+                    imagePath = 'https://tse4.mm.bing.net/th?id=OIP.oqHnFUiRuHsEgxHdPWBNiAHaE7&pid=Api&P=0&h=180';
+                    break;
+                case 'iron':
+                    infoText = 'Iron is a chemical element with the symbol Fe (from Latin: ferrum) and atomic number 26.';
+                    imagePath = 'https://tse2.mm.bing.net/th?id=OIP.IkqLbFpCmMwbHtXnNwgLhQHaE6&pid=Api&P=0&h=180';
+                    break;
+                case 'zinc':
+                    infoText = 'Zinc is a chemical element with the symbol Zn (from Latin: zincum) and atomic number 30.';
+                    imagePath = 'https://tse4.mm.bing.net/th?id=OIP.AiRuVLwCsHmfPdLcHnFmzQHaE7&pid=Api&P=0&h=180';
+                    break;
+            }
+
+            if (imagePath) {
+                infoText = '<img src="' + imagePath + '" alt="' + resource + ' image" /><br />' + infoText;
+            }
+
+            infoContainer.innerHTML = infoText;
+        }
+    </script>
+</body>
+</html>

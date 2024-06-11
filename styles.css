@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+body {
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+   }
+   
+   .main {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 100px;
+    width: 400px;
+    border-radius: 0px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+   }
+   
+   h1 {
+    text-align: center;
+    margin-bottom: 10px;
+   }
+   
+   h2 {
+    text-align: center;
+    margin-bottom: 20px;
+   }
+   
+   .button {
+    display: center;
+    width: 50%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    
+   }
+   
+   .button-secondary {
+    display: inline-block;
+    width: calc(35% - 5px);
+    padding: 10px;
+    background-color: #f1f1f1;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: top;
+   }
+   
+   .buttons {
+    margin-bottom: 20px;
+   }
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+     
+    
+}
+
+h1, h2, p {
+    margin: 10px 0;
+}
+
+main {
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 800px; /* Increased max-width */
+    width: 100%;
+    flex-wrap: wrap; /* Allow buttons to wrap to the next line on smaller screens */
+}
+
+.buttons-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Added margin-bottom for spacing between button groups */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.button, .button-secondary {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.button {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.button-secondary {
+    background-color: #ecf0f1;
+    color: #333;
+}
+
+.button:hover, .button-secondary:hover {
+    background-color: #2980b9;
+}
+
+.info-container {
+    margin-top: 50px;
+    max-width: 600px;
+}
+
+.floating-window {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 3px 2px 5px rgba(29, 25, 25, 0.1);
+    padding: 90px;
+    border-radius: 10px;
+    display: none;
+    z-index: 500;
+}
+
+.button:hover .floating-window {
+    display: block;
+}
+
+.mining-image {
+    display: grid;
+    grid-template-rows: repeat(3, 50px);
+    grid-template-columns: repeat(3, 50px);
+    grid-gap: 10px; 
+    justify-content: center;
+    padding: 1%;
+}
+
+
+div{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+.container{
+    display: flex;
+}
+.left-half{
+    flex: 1;
+    padding: 1rem;
+}
+.right-half{
+    flex: 1;
+    padding: 1rem;
+}
+.mainbot{
+    max-width: 45%;
+    margin-top: 100px ;
+}
+.buttons-group .content-overlay{
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+  .buttons-group:hover .content-overlay{
+    opacity: 1;
+  }
+
+
+.mining-image {
+    position: relative;
+    display: inline-block;
+}
+
+.mining-image:hover .content-overlay {
+    opacity: 1;
+}
+
+.mining-image .content-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+    border-radius: 5px;
+}
+
+.mining-image .content-overlay::after {
+    content: attr(alt);
+    text-align: center;
+}
+

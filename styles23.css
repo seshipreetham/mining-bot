@@ -1,0 +1,140 @@
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    background-color: #2f373a;
+    color: white;
+    padding-left: 20px;
+}
+
+.right {
+    flex: 7;
+    background-color: #747474;
+}
+
+.bottom-left-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding-left: 50px;
+}
+
+body {
+    display: flex;
+    height: 900vh;
+    margin: 0;
+}
+
+.center-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    margin: auto;
+}
+
+.context-area {
+    position: absolute;
+    top: 30%;
+    left: 55.5%;
+    transform: translateX(-50%);
+    width: 66.5%;
+    height: 53%;
+    background-color: #363535;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    overflow-y: auto; /* Added overflow-y for scrolling */
+    max-height: 60vh; /* Set the maximum height for scrolling */
+}
+
+.search-bar {
+    position: fixed;
+    bottom: 0;
+    left: 55%;
+    /* Set the left position to 50% */
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: #f2f2f2;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button,
+#microphone-button {
+    margin-left: 1px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #a6a6a6;
+    color: white;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#microphone-button {
+    background-color: #f44336;
+}
+
+#search-button:hover,
+#microphone-button:hover {
+    background-color: #2f373a;
+}
+
+.search-bar {
+    position: fixed;
+    bottom: 0;
+    left: 55%;
+    transform: translateX(-50%);
+    width: 70%;
+    background-color: #f2f2f2;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+#search-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#search-button,
+#microphone-button {
+    margin-left: 1px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #a6a6a6;
+    color: white;
+}
+
+#microphone-button {
+    background-color: #f44336;
+}
+
+#search-button:hover,
+#microphone-button:hover {
+    background-color: #2f373a;
+}
